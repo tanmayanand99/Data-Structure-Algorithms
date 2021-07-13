@@ -1,5 +1,5 @@
 <h1 align="center">
-Data-Structure-Algorithms
+Data Structure Algorithms
 </h1>
 
 <!-- TABLE OF CONTENTS -->
@@ -20,14 +20,14 @@ This Repository contains all the DSA questions.
 
 
 ### Built With
-* [C++](www.cplusplus.com)
+* [C++](https://www.cplusplus.com/)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-We need to install below software for running the programs
+We need to install any `IDE` for running these C++ programs.
 
 
 
@@ -38,6 +38,10 @@ We need to install below software for running the programs
 Install Visual Studio Code from https://code.visualstudio.com/download
 ```
 
+* C++
+```sh
+Install C++ from https://www.cplusplus.com/
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
