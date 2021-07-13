@@ -1,5 +1,5 @@
 <h1 align="center">
-Data Structure Algorithms
+Data Structure & Algorithms
 </h1>
 
 <!-- TABLE OF CONTENTS -->
