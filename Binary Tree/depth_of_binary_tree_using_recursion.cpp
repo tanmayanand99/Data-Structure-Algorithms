@@ -13,21 +13,21 @@ typedef struct nodes
         right=NULL;
     }
 }node;
-int sizeoftree(node *root)
+int heightoftree(node *root)
 {
     if(!root)
         return 0;
 
     if(!root->left && !root->right)
     {
-        return 1;
+        return 0;
     }
     else
     {
-        int l = sizeoftree(root->left);
-        int r = sizeoftree(root->right);
-        int total = l + r +1;
-        return total;
+        int l = heightoftree(root->left);
+        int r = heightoftree(root->right);
+        int m = max(l,r)+1;
+        return m;
     }
 }
 int main()
@@ -46,6 +46,6 @@ int main()
             / \   / \
            4   5 6   7  
     */
-    cout << sizeoftree(root);
+    cout << heightoftree(root);
 }
 

@@ -20,12 +20,12 @@ int sizeoftree(node *root)
 
     if(!root->left && !root->right)
     {
-        return 1;
+        return 0;
     }
     else
     {
         int l = sizeoftree(root->left);
-        int r = sizeoftree(root->right);
+        int r=sizeoftree(root->right);
         int total = l + r +1;
         return total;
     }

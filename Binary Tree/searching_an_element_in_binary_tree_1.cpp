@@ -13,22 +13,23 @@ typedef struct nodes
         right=NULL;
     }
 }node;
-int sizeoftree(node *root)
+int search(node *root,int n)
 {
     if(!root)
         return 0;
-
-    if(!root->left && !root->right)
-    {
-        return 1;
-    }
     else
     {
-        int l = sizeoftree(root->left);
-        int r = sizeoftree(root->right);
-        int total = l + r +1;
-        return total;
+        if(root->data==n)
+        {
+            return 1;
+        }
+        int l = search(root->left,n);
+        if(l!=0)
+            return 1;
+        else
+            return search(root->right,n);
     }
+    return 0;
 }
 int main()
 {
@@ -40,12 +41,14 @@ int main()
     root->right->left = new node(6);
     root->right->right = new node(7);
     /*
-                1    
+                1
               /   \
-             2     3    
+             2     3
             / \   / \
-           4   5 6   7  
+           4   5 6   7
     */
-    cout << sizeoftree(root);
+    int n;
+    cin >> n;
+    cout << search(root,n);
 }
 

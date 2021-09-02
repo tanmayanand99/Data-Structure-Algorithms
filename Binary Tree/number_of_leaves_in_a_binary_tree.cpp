@@ -1,5 +1,4 @@
 #include<iostream>
-#include<queue>
 using namespace std;
 typedef struct nodes
 {
@@ -13,20 +12,20 @@ typedef struct nodes
         right=NULL;
     }
 }node;
-int sizeoftree(node *root)
+int leavesno(node *root)
 {
     if(!root)
         return 0;
-
-    if(!root->left && !root->right)
+    
+    if(root->left==NULL && root->right==NULL)
     {
         return 1;
     }
     else
     {
-        int l = sizeoftree(root->left);
-        int r = sizeoftree(root->right);
-        int total = l + r +1;
+        int l = leavesno(root->left);
+        int r = leavesno(root->right);
+        int total = l + r;
         return total;
     }
 }
@@ -40,12 +39,11 @@ int main()
     root->right->left = new node(6);
     root->right->right = new node(7);
     /*
-                1    
+                1
               /   \
-             2     3    
+             2     3
             / \   / \
-           4   5 6   7  
+           4   5 6   7
     */
-    cout << sizeoftree(root);
+    cout << "No. of Leaf Nodes : " << leavesno(root);
 }
-
